@@ -1,0 +1,23 @@
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    color: black;
+
+    font-family: Calibri;
+
+    padding: 30px 0;
+}
+
+.footer-content-bloc li{
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+.footer-content-bloc img{
+    padding-right: 5px;
+    height: 18px;
+}
