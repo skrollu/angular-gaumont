@@ -1,0 +1,95 @@
+<div class="movie-details-content">
+    <div class="movie-details-bloc">
+        <div class="movie-details-poster">
+            <img 
+                src="{{movie.poster}}"
+                alt="Poster de {{movie.title}}"
+            >
+        </div>
+
+        <div class="movie-details-infos">
+            <div class="movie-details-main-infos">
+                <div class="movie-details-title">
+                    <h3>{{movie.title}}</h3> 
+                    <p>
+                        Duration: {{movie.runtime}} mins
+                    </p>
+                    <div class="movie-details-rated">{{movie.rated}}</div>
+                </div>
+                <p>{{movie.plot}}</p>
+            </div>
+
+            <div class="movie-details-director-writers-actors">
+                <div class="movie-details-director">
+                    <h4>Directed by </h4> {{movie.director}}
+                </div>
+                <div class="movie-details-writers">
+                    <h4>Written by </h4> 
+                    <ul *ngFor="let writer of movie.writers">
+                        <!-- Parce que les données ne sont pas encore chargé l'aficheage se fait un fois arrivés les données se palcent mal... -->
+                        <li>{{writer}}</li>
+                    </ul>
+                </div>                
+                <div class="movie-details-actors">
+                    <h4>With</h4>
+                    <ul *ngFor="let actor of movie.actors"> <!-- Parce que les données ne sont pas encore chargé l'aficheage se fait un fois arrivés les données se palcent mal... -->
+                        <li>{{actor}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="movie-details-rating">
+                <div class="movie-details-rating-imdb" *ngIf="movie.imdb != null">
+                    <ul>
+                        <li><h4>Imdb</h4> {{movie.imdb.rating}}/10</li>
+                        <!-- <li>Rate: <progress max="10" value="{{movie.imdb.rating}}">{{movie.imdb.rating}}</progress></li> -->
+                        <li>Votes: {{movie.imdb.votes}}</li>
+                    </ul>
+                </div>
+                <div class="movie-details-rating-metacritic" *ngIf="movie.metacritic != null">
+                    <ul>
+                        <li><h4>Metacritic</h4> {{movie.metacritic}}/100</li>
+                    </ul>
+                </div>
+                <div class="movie-details-rating-tomato" *ngIf="movie.tomato!= null">
+                    <ul>
+                        <li><h4>Tomato</h4> {{movie.tomato.meter}}/100</li>
+                        <li>{{movie.tomato.rating}}/10</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div *ngIf="movie.awards != null" class="movie-details-awards">
+                <h5>{{movie.awards.text}}</h5>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="movie-details-booking">
+        <div class="movie-details-booking-button">
+            <button id="movie-details-booking-button" (click)="onReserveClick()">Réserver</button>
+        </div>
+        <div *ngIf="reservationDisplayed">
+
+            <ul>
+                <li>Lun. 14h 18h 20h 22h</li>
+                <li>Mar. 14h 18h 20h 22h</li>
+                <li>Mer. 14h 18h 20h 22h</li>
+                <li>Jeu. 14h 18h 20h 22h</li>
+                <li>Ven. 14h 18h 20h 22h</li>
+                <li>Sam. 14h 18h 20h 22h</li>
+                <li>Dim. 14h 18h 20h 22h</li>
+            </ul>
+
+            <!--             <ul *ngFor="let day of timetable">
+                            <ul *ngFor="let time of day">
+                                <li>{{time}}</li>
+                            </ul>
+                        </ul>
+             -->
+        </div>
+    </div>
+    
+</div>

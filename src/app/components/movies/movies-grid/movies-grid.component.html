@@ -1,0 +1,26 @@
+<div class="movies-grid-content">
+
+    <div class="movies-grid-title">
+        <h1>
+            À l'affiche cette semaine
+        </h1>
+    </div>
+
+   
+    <div class="movies-grid-content-bloc">
+        <div class="movies-button" (click)="previousMovies()">
+            <button id="movies-button-id"><</button>
+        </div>
+        <div class="movies-grid">
+            <app-movie-card
+                *ngFor="let movie of movies"
+                [movie]="movie">
+            </app-movie-card>
+        </div>
+        <div class="movies-button">
+            <button id="movies-button-id" (click)="nextMovies()">></button>
+        </div>
+    </div>
+
+    
+</div>

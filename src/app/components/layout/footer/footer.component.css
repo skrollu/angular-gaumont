@@ -1,4 +1,6 @@
 .footer-content {
+    background-color: white;
+/* background-image: linear-gradient(to right, rgb(20, 20, 20), rgb(56, 56, 56));*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

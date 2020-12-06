@@ -2,18 +2,17 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .layout-header  {
-    background-color: black;
+    
 }
 
 .layout-main  {
-    margin: 0;
     flex: 1 0 auto;
+    background-color: rgb(233, 232, 232);
 }
 
 .layout-footer  {
-   background-color: rgb(233, 232, 232);
+   
 }

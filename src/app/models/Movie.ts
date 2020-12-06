@@ -21,7 +21,7 @@ export class Movie {
   runtime: Number;
   title: string;
   tomato: {
-  consensus: string
+    consensus: string
     fresh: Number
     image: string
     meter: Number

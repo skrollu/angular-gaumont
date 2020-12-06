@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module'
+import { GraphQLModule } from './graphql.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
-import { MovieComponent } from './components/movie/movie.component';
-import { GraphQLModule } from './graphql.module';
+import { MovieComponent } from './components/movies/movies-grid/movies-grid.component';
+import { MovieCardComponent } from './components/movies/movie-card/movie-card.component';
+import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component';
+import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { GraphQLModule } from './graphql.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MovieComponent
+    MovieComponent,
+    MovieCardComponent,
+    MovieDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

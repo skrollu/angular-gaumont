@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MovieComponent } from './components/movie/movie.component'
+import { MovieComponent } from './components/movies/movies-grid/movies-grid.component'
+import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component'
+import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 
 const routes: Routes = [
     { path: '', component: MovieComponent },
+    { path: 'movie/:id', component: MovieDetailsComponent },
+    { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 
 @NgModule({

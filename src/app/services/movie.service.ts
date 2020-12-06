@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';  // Injectable allows us to inject t
 import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { Movie } from '../models/Movie'
 import { Observable } from 'rxjs';
+import { gql, Apollo } from 'apollo-angular';
 
 
 const httpOptions = {
@@ -10,59 +11,43 @@ const httpOptions = {
   })
 }
 
+export interface Response {
+  movies: Movie[];
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-  graphqlUrl:string = "http://http://localhost:4000/graphql"
+  public movies: Movie[];
+  public moviesUrl: string = `http://localhost:4000/movies`
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private apollo: Apollo) { }
 
-  getMovies():Observable<Movie[]> {
-    return this.http.post<Movie[]>(`${this.graphqlUrl}`, {
-      /*query movies {
-        movies{
+  public getMoviesGraphQL = (): Movie[] => {
+    this.apollo.query({
+      query: gql`
+      query movies{
+        movies {
           _id,
-        actors,
-        awards{
-          nominations,
-          text,
-          wins
+          title,
         }
-        countries,
-        director,
-        genres,
-        imdb {
-          
-          rating,
-          id,
-          votes
-        }
-        metacritic,
-        plot,
-        poster,
-        rated,
-        runtime,
-        title,
-        tomato {
-          consensus,
-          fresh,
-          image,
-          meter,
-          rating,
-          reviews,
-          userMeter,
-          userRating,
-          userReviews
-        }
-        type,
-        writers,
-        year,
-        youtubeEmbedUrl,
-        }
-      }*/
+      }`
+    }).subscribe(result => {
+      //this.movies = result.data.movies as Movie[];
+      //console.log(this.movies);
     })
+    return this.movies;
   }
+
+  public getMovies(): Observable<any> {
+    return this.http.get<any[]>('/api/movies', httpOptions);
+  }
+
+  public getMovieById(id: string): Observable<any> {
+    return this.http.get<any>(`/api/movies/${id}`, httpOptions);
+  }
+}
 
 /*
   toggleCompleted(todo:Todo):Observable<any> {
@@ -79,4 +64,3 @@ export class MovieService {
     return this.http.post<Todo>(this.todosUrl, todo, httpOptions);
   }
 */
-}

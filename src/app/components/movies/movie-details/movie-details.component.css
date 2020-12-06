@@ -1,0 +1,113 @@
+.movie-details-content {
+    padding: 100px 10%;
+}
+
+.movie-details-bloc {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    padding-bottom: 50px;
+}
+
+.movie-details-poster img {
+    height: 500px;
+    width: 350px;
+    margin-right: 30px;
+    transition:  height 0.5s, width 0.5s; 
+}
+
+.movie-details-poster img:hover {
+    cursor: pointer;
+    height: 700px;
+    width: 500px;
+}
+
+.movie-details-infos li{
+    list-style-type: none;
+}
+
+.movie-details-main-infos{
+    margin-bottom: 50px;
+}
+
+.movie-details-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    margin-bottom: 50px;
+}
+
+.movie-details-title h3, p, div {
+    margin-right: 10px;
+}
+
+.movie-details-rated {
+    font-weight: bold;
+}
+
+/****** DIRECTOR & wRITERS & ACTORS *******/
+.movie-details-director-writers-actors {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.movie-details-writers li{
+    /* display: inline-block; */
+}
+.movie-details-actors li{
+    display: inline-block;
+}
+
+/****** RATING *******/
+.movie-details-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    margin-bottom: 20px;
+}
+
+.movie-details-rating li {
+    margin-right: 15px;
+}
+
+.movie-details-rating-imdb li, h4 {
+    display: inline-block;
+}
+.movie-details-rating-metacritic li, h4 {
+    display: inline-block;
+}
+.movie-details-rating-tomato li, h4 {
+    display: inline-block;
+}
+
+/***** BOOKING *****/
+
+.movie-details-booking {
+
+}
+
+.movie-details-booking-button {
+   display: flex;
+   justify-content: center;
+}
+
+#movie-details-booking-button {
+    cursor: pointer;
+
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    background-color: rgb(255, 225, 0);
+    color: black;
+
+    border: solid 1px rgb(46, 46, 46);
+    border-radius: 25px;
+    padding: 12px 20px;
+}

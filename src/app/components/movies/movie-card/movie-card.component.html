@@ -1,0 +1,16 @@
+<div class="movie-card-content">
+    <a routerLink="/movie/{{movie._id}}">
+        <div class="movie-card">
+            <div class="movie-card-inner">
+                <div class="movie-card-front">
+                <img id="movie-img-{{movie._id}}" src="{{movie.poster}}" alt="poster of {{movie.title}}"
+                style="width:350px;height:500px;">
+            </div>
+            <div class="movie-card-back">
+                    <h1>{{movie.title}}</h1>
+                    <p>{{movie.plot}}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
