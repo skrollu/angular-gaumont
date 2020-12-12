@@ -12,6 +12,8 @@ import { MovieComponent } from './components/movies/movies-grid/movies-grid.comp
 import { MovieCardComponent } from './components/movies/movie-card/movie-card.component';
 import { MovieDetailsComponent } from './components/movies/movie-details/movie-details.component';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { RegisterComponent } from './components/login/register/register.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { PageNotFoundComponent } from './components/error/page-not-found/page-no
     MovieComponent,
     MovieCardComponent,
     MovieDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

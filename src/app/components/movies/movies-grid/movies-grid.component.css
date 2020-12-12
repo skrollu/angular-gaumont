@@ -27,6 +27,7 @@
     font-size: 50px;
 
     border-radius: 20px;
+    border: none;
 
     transition: opacity 0.3s, color 0.3s;
 }

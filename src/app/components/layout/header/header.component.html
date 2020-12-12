@@ -1,10 +1,56 @@
 <div class="header-content">
-    <div class="header-content-bloc">
-        <h1>Gaumont</h1>
+    <div class="header-background">
+        <img 
+        src="../assets/images/salle-cinema.jpg"
+        />
     </div>
-    <div class="header-content-bloc">
-        <nav>
-            <a routerLink="/">Movies</a>
+    <div class="header-front">
+        <div class="header-bloc">
+            <div class="header-bloc-part">
+                <div class="header-bloc-title">
+                    <div>
+                        <h3>𝓁𝑒𝓈 𝒸𝒾𝓃𝑒𝓂𝒶𝓈</h3>
+                    </div>
+                    <div>
+                        <h1>𝗣𝗔𝗧𝗛𝗘 𝗚𝗔𝗨𝗠𝗢𝗡𝗧</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bloc-part">        
+                <div class="header-Login-Logout">
+                    <a routerLink="/login">Me connecter</a>
+                   <!--  /
+                    <a routerLink="/" (click)="logout()">Logout</a> -->
+                </div>
+                <div class="header-register">
+                    <a routerLink="/register">Créer un compte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-about-link">
+            <a routerLink="/">En savoir plus</a>
+        </div>
+        
+        <nav class="header-navbar">
+            <div class="header-link-container">
+                <a routerLink="/">Films</a>
+            </div>
+            <div class="header-link-container">
+                <a routerLink="/">Cinémas</a>
+            </div>
+            <div class="header-link-container">
+                <a routerLink="/">Films & Evènements</a>
+            </div>
+            <div class="header-link-container">
+                <a routerLink="/">Cinépass</a>
+            </div>
+            <div class="header-link-container">
+                <a routerLink="/">Offres & actus</a>
+            </div>
+            <div class="header-link-container">
+                <a routerLink="/">Rechercher</a>
+            </div>
         </nav>
     </div>
 </div>

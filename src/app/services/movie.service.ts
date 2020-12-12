@@ -11,10 +11,6 @@ const httpOptions = {
   })
 }
 
-export interface Response {
-  movies: Movie[];
-}
-
 @Injectable({
   providedIn: 'root'
 })

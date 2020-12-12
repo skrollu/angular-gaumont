@@ -1,27 +1,152 @@
 .header-content {
-    background-image: linear-gradient(to right, rgb(114, 7, 7) , rgb(235, 38, 38));
+    height: 50rem;
+}
 
+.header-background img {
+    z-index: 1;
+    height: 65rem;
+    width: 100%;
+}
+
+.header-front{
+    z-index: 2;
+    
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    padding: 30px 30px;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-
-    height: 8rem;
+    
 }
 
-.header-content-bloc {
+.header-bloc-title {
+    text-transform: uppercase;
+}
+
+.header-bloc {
+    text-decoration: none;
+    color: white;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/*
+************** LOGGIN SECTION **************
+*/
+
+.header-Login-Logout a{
+    cursor: pointer;
+    
+    font-size: 40px;
+    
+    text-decoration: none;
+    color: white;
+
+    transition: font-size 0.3s;
+}
+
+.header-Login-Logout a:hover {
+    font-size: 43px;
+}
+
+.header-register {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.header-register a{
+    cursor: pointer;
+    
+    text-decoration: none;
+    color: white;
+    font-size: 100;
+    font-family: Calibri light;
+    text-align: center;
+    
+    padding: 3px 7px;
+    border: none;
+    border-radius: 15px;
+    
+    background-color: rgba(128, 128, 128, 0.658);
+    
+    transition: background-color 0.3s;
+}
+
+.header-register a:hover {
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+/*
+************** ABOUT SECTION **************
+*/
+
+
+.header-about-link {
+    position: absolute;
+    top: 31rem;
+    left: 8rem;
+    height: 3rem;
+}
+
+.header-about-link a{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    
+    
+    border: none;
+    border-radius: 27px;
+    padding: 17px 70px;
+    background-color:rgb(240, 240, 0);
+    transition: background-color 0.5s linear;
+}
+
+.header-about-link a:hover {
+    background-color:rgb(241, 241, 98);
+}
+
+/*
+************** NAV BAR **************
+*/
+
+.header-navbar {
+    padding: 0 70px 10px 70px;
+    
+    position: relative;
+    top: 33rem;
+    height: 7rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.header-navbar a{
+    text-align: center;
+    align-content: flex-end;
+    
+    height: 100%;
+    padding: 40px 90px;
+    
+    text-transform: uppercase;
+    font-weight: 700;
     text-decoration: none;
     color: white;
 }
 
-.header-content-bloc a{
-    font-weight: 700;
+.header-navbar a:hover{
     text-decoration: none;
-    color: rgb(228, 227, 227);
-    transition: color 0.5s;
-}
-
-.header-content-bloc a:hover{
-    text-decoration: none;
-    color:white;
+    background-color: rgba(177, 177, 177, 0.411);
+    border-bottom:rgb(255, 255, 0) 6px solid;
 }

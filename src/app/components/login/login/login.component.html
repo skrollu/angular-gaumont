@@ -1,0 +1,27 @@
+<div class="login-content">
+    <div class="login-form">
+        <div *ngIf="error != null">
+            <div class="login-form-error">
+                <p>
+                    {{error}}
+                </p>
+            </div>
+        </div>
+
+        <form (ngSubmit)="loginSubmit()">
+            <div class="login-form-bloc">
+                <input type="text" name="username" [(ngModel)] = "username" placeholder="Identifiant" required>
+            </div>
+            <div class="login-form-bloc">
+                <input type="password" name="password" [(ngModel)] = "password" placeholder="Mot de passe" required>
+            </div>
+            <div class="login-form-bloc">
+                <button id="login-form-button-id" type="submit">Se connecter</button>
+            </div>
+        </form>
+
+        <div class="login-form-redirect">
+            <a routerLink="/register">Vous n'avez pas en encore de compte ?</a>
+        </div>
+    </div>
+</div>

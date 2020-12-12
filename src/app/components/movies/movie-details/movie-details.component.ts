@@ -30,7 +30,7 @@ export class MovieDetailsComponent implements OnInit {
     this.movieService.getMovieById(this.route.snapshot.paramMap.get('id'))
       .subscribe( result => {
         console.log(result)
-        this.movie = (result as any).movies as Movie;
+        this.movie = (result as any).movie as Movie;
       });
   }
 

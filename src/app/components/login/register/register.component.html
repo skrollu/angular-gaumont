@@ -1,0 +1,31 @@
+<div class="register-content">
+    <div class="register-form">
+        <div *ngIf="error != null">
+            <div class="register-form-error">
+                <p>
+                    {{error}}
+                </p>
+            </div>
+        </div>
+
+        <form (ngSubmit)="registerSubmit()">
+            <div class="register-form-bloc">
+                <label>
+                    <input type="text" name="username" [(ngModel)]="username" placeholder="Identifiant" required>
+                </label>
+            </div>
+            <div class="register-form-bloc">
+                <label>
+                    <input type="password" name="password" [(ngModel)]="password" placeholder="Mot de passe" required>
+                </label>
+            </div>
+            <div class="register-form-bloc">
+                <button id="register-form-button-id" type="submit">S'inscrire</button>
+            </div>
+        </form>
+
+        <div class="register-form-redirect">
+            <a routerLink="/login">Vous avez déjà un compte ?</a>
+        </div>
+    </div>
+</div>
