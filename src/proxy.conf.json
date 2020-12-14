@@ -3,5 +3,11 @@
         "target": "http://localhost:4000",
         "secure": false,
         "logLevel": "debug"
+    },
+    
+    "/datas/*": {
+        "target": "http://localhost:4000",
+        "secure": false,
+        "logLevel": "debug"
     }
 }
