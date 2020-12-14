@@ -16,7 +16,6 @@ const httpOptions = {
 })
 export class MovieService {
   public movies: Movie[];
-  public moviesUrl: string = `http://localhost:4000/movies`
 
   constructor(private http:HttpClient, private apollo: Apollo) { }
 

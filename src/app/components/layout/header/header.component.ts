@@ -7,6 +7,7 @@ import { LoginService } from 'src/app/services/login/login.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  logged: boolean = false;
 
   constructor(private loginService: LoginService) { }
 

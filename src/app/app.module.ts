@@ -14,6 +14,7 @@ import { MovieDetailsComponent } from './components/movies/movie-details/movie-d
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/login/register/register.component';
+import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RegisterComponent } from './components/login/register/register.componen
     MovieDetailsComponent,
     PageNotFoundComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CinemaMaapComponent
   ],
   imports: [
     BrowserModule,

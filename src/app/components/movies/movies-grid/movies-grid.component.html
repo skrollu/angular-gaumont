@@ -1,26 +1,91 @@
 <div class="movies-grid-content">
 
-    <div class="movies-grid-title">
-        <h1>
-            À l'affiche cette semaine
-        </h1>
-    </div>
-
-   
-    <div class="movies-grid-content-bloc">
-        <div class="movies-button" (click)="previousMovies()">
-            <button id="movies-button-id"><</button>
+    <div class="movies-grid-bloc">
+        <div class="movies-grid-title">
+            <h1>
+                À l'affiche cette semaine
+            </h1>
         </div>
-        <div class="movies-grid">
-            <app-movie-card
-                *ngFor="let movie of movies"
-                [movie]="movie">
-            </app-movie-card>
-        </div>
-        <div class="movies-button">
-            <button id="movies-button-id" (click)="nextMovies()">></button>
-        </div>
-    </div>
-
     
+       
+        <div class="movies-grid-content-bloc">
+            <div class="movies-button" (click)="previousMovies()">
+                <button id="movies-button-id"><</button>
+            </div>
+            <div class="movies-grid">
+                <app-movie-card
+                    *ngFor="let movie of movies"
+                    [movie]="movie">
+                </app-movie-card>
+            </div>
+            <div class="movies-button">
+                <button id="movies-button-id" (click)="nextMovies()">></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="movies-grid-bloc">
+        <div class="movies-grid-title">
+            <h1>
+                Prochainement
+            </h1>
+        </div>
+
+        <div class="movies-event-grid">
+            <div class="movies-event-card">
+                <div class="movies-event-card-front">
+                    <img
+                        src="../../../../assets/images/wonder-woman.jpg"
+                        style="height: 500px; width: 350px;"
+                        />
+                </div>
+                <div class="movies-event-card-back">
+                    <h3>Wonder Woman 1984</h3>
+                    <a routerLink="/movie/123">Réserver</a>
+                </div>
+            </div>
+
+            <div class="movies-event-card">
+                <div class="movies-event-card-front">
+                    <img src="../../../../assets/images/james-bond.webp" style="height: 500px; width: 350px;" />
+                </div>
+                <div class="movies-event-card-back">
+                    <h3>James Bond Mourir peut attendre</h3>
+                    <a routerLink="/movie/123">Réserver</a>
+                </div>
+            </div>
+
+            <div class="movies-event-card">
+                <div class="movies-event-card-front">
+                    <img src="../../../../assets/images/Black-Widow.webp" style="height: 500px; width: 350px;" />
+                </div>
+                <div class="movies-event-card-back">
+                    <h3>Black Widow</h3>
+                    <a routerLink="/movie/123">Réserver</a>
+                </div>
+            </div>
+
+            <div class="movies-event-card">
+                <div class="movies-event-card-front">
+                    <img src="../../../../assets/images/hunger-games3.jpg" style="height: 500px; width: 350px;" />
+                </div>
+                <div class="movies-event-card-back">
+                    <h3>Hunger Games 3</h3>
+                    <a routerLink="/movie/123">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="movies-grid-bloc">
+        <div class="movies-grid-title">
+            <h1>
+                Actualités
+            </h1>
+        </div>
+        
+        <div class="">
+            <p>Ici faire des pages d'actualités rédigeables par des utilisateurs "semi-admin"</p>
+        </div>
+    </div>
 </div>

@@ -5,9 +5,11 @@ import { MovieDetailsComponent } from './components/movies/movie-details/movie-d
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/login/register/register.component';
+import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap.component'
 
 const routes: Routes = [
     { path: '', component: MovieComponent },
+    { path: 'cinema', component: CinemaMaapComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'movie/:id', component: MovieDetailsComponent },

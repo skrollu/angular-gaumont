@@ -33,11 +33,12 @@ export class LoginComponent implements OnInit {
   loginSubmit(){
     if(this.username != null && this.password != null) {
       this.loginService.login(this.username, this.password).subscribe( data => {
-        console.log(data)
+        
         if( (data as any).logged ){
           this.router.navigate(['/']);
         } else {
-          this.error = (data as any).error;
+          console.log((data as any).error)
+          this.error = (data as any).error.error.error;
         }
       });
     } else {

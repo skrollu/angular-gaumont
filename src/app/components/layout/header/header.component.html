@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-bloc-part">        
+            <div class="header-bloc-part" *ngIf="logged == false">        
                 <div class="header-Login-Logout">
                     <a routerLink="/login">Me connecter</a>
                    <!--  /
@@ -37,7 +37,7 @@
                 <a routerLink="/">Films</a>
             </div>
             <div class="header-link-container">
-                <a routerLink="/">Cinémas</a>
+                <a routerLink="/cinema">Cinémas</a>
             </div>
             <div class="header-link-container">
                 <a routerLink="/">Films & Evènements</a>
