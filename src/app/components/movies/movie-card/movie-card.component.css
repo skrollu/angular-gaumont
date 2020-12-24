@@ -1,22 +1,19 @@
-.movie-card {
-    margin: 0 20px;
-
-    /* cursor: pointer; */
-    width: 300px;
-    height: 450px;
-}
-
  /* The flip card container - set the width and height to whatever you want. 
  We have added the border property to demonstrate that the flip itself goes out
-  of the box on hover (remove perspective if you don't want the 3D effect */
-.movie-card {
+ of the box on hover (remove perspective if you don't want the 3D effect */
+ .movie-card {
   background-color: transparent;
-  width: 350px;
-  height: 500px;
   /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
-  margin: 0 15px;
+.movie-card-border {
+  border-radius: 7px;
+}
+
+.movie-card-size {
+  height: 600px;
+  width: 400px;
 }
 
 /* This container is needed to position the front and back side */
@@ -51,14 +48,39 @@
 
 /* Style the back side */
 .movie-card-back {
-    background-color: rgb(54, 53, 53);
-    color: white;
-    transform: rotateY(-180deg);
-      
-    overflow: hidden;
-    padding: 5px;
+  background-color: #343840;
+  color: white;
+  transform: rotateY(-180deg);
+  
+  overflow: hidden;
+  padding: 5px;
 } 
 
 .movie-card-back p{
-    padding: 0 7px;
+  padding: 0 7px;
+}
+
+/*************************************************************
+REPONSIVE
+*************************************************************/
+
+@media screen and (max-width: 1920px) /* and (max-width: 640px) */ {
+  .movie-card-size {
+    height: 550px;
+    width: 375px;
+  }
+}
+
+@media screen and (max-width: 1919px) /* and (max-width: 640px) */ {
+  .movie-card-size {
+    height: 500px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1500px) /* and (max-width: 640px) */ {
+  .movie-card-size {
+    height: 400px;
+    width: 275px;
+  }
 }

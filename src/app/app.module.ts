@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
@@ -15,6 +16,7 @@ import { PageNotFoundComponent } from './components/error/page-not-found/page-no
 import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/login/register/register.component';
 import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap.component';
+import { TestComponent } from './components/test/test/test.component';
 
 
 @NgModule({
@@ -28,10 +30,12 @@ import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap
     PageNotFoundComponent,
     LoginComponent,
     RegisterComponent,
-    CinemaMaapComponent
+    CinemaMaapComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,

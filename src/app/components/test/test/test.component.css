@@ -1,0 +1,116 @@
+.test-container {
+    margin: 0 150px;
+    padding: 0 50px;
+    height: 100%;
+    
+    background-color: white;
+}
+
+.slider {
+    border: 1px solid red;
+    width: 100%;
+    position: relative;
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    overflow: hidden;
+}
+
+.slide-row {
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    background-color: rgb(35, 127, 207);
+    transition: 0.5s;
+}
+
+.slide {
+    position: relative;
+    border: 1px solid blue;
+    min-width: 50%;
+    height: 50%;
+    
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#goLeft, #goRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 80%;
+    
+    border: none;
+    outline: none;
+    transition: .2s;
+    
+    
+    
+    background-color: rgba(0, 0, 0, 0.500);
+    color: rgb(214, 214, 214);
+    
+    
+    
+    border-radius: 20px;
+    border: none;
+    
+    transition: opacity 0.3s, color 0.3s;
+}
+
+#goLeft {
+    left: 0;
+}
+
+#goRight {
+    right: 0;
+}
+
+#goLeft:hover, #goRight :hover {
+    background: rgba(#000000, 0.356);
+    cursor: pointer;
+}
+
+
+
+/****** Open/Close Box ********/
+
+
+:host {
+    display: block;
+}
+
+.open-close-container {
+    border: 1px solid #dddddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*************************************************************
+REPONSIVE
+*************************************************************/
+
+
+@media screen and (max-width: 1920px) /* and (max-width: 640px) */ {
+    .test-container  {
+        margin: 0 0 0 150px;
+    }
+}
+
+@media screen and (max-width: 1919px) /* and (max-width: 640px) */ {
+    .test-container  {
+        margin: 0 0 0 100px;
+    }
+}
+
+@media screen and (max-width: 1500px) /* and (max-width: 640px) */ {
+    .test-container  {
+        margin: 0 0 0 100px;
+    }
+}

@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './components/error/page-not-found/page-no
 import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/login/register/register.component';
 import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap.component'
+import { TestComponent } from './components/test/test/test.component'
 
 const routes: Routes = [
     { path: '', component: MovieComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'movie/:id', component: MovieDetailsComponent },
+    { path: 'test', component: TestComponent },
     { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 

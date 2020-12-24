@@ -2,8 +2,11 @@
     height: 50rem;
 }
 
+.header-background {
+    background-color: grey;
+}
+
 .header-background img {
-    z-index: 1;
     height: 65rem;
     width: 100%;
 }
@@ -16,16 +19,10 @@
     top: 0px;
     left: 0px;
     
-    padding: 30px 30px;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     
-}
-
-.header-bloc-title {
-    text-transform: uppercase;
 }
 
 .header-bloc {
@@ -38,6 +35,7 @@
     align-items: baseline;
 }
 
+
 /*
 ************** LOGGIN SECTION **************
 */
@@ -49,7 +47,7 @@
     
     text-decoration: none;
     color: white;
-
+    
     transition: font-size 0.3s;
 }
 
@@ -107,11 +105,11 @@
     border-radius: 27px;
     padding: 17px 70px;
     background-color:rgb(240, 240, 0);
-    transition: background-color 0.5s linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .header-about-link a:hover {
-    background-color:rgb(241, 241, 98);
+    background-color:rgb(255, 230, 0);
 }
 
 /*
@@ -119,25 +117,24 @@
 */
 
 .header-navbar {
-    padding: 0 70px 10px 70px;
+    margin: 0 150px;
     
     position: relative;
-    top: 33rem;
+    top: 34rem;
     height: 7rem;
     
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-wrap: wrap;
 }
 
 .header-navbar a{
     text-align: center;
-    align-content: flex-end;
     
     height: 100%;
-    padding: 40px 90px;
+    padding: 40px 55px;
     
     text-transform: uppercase;
     font-weight: 700;
@@ -149,4 +146,103 @@
     text-decoration: none;
     background-color: rgba(177, 177, 177, 0.411);
     border-bottom:rgb(255, 255, 0) 6px solid;
+}
+
+/*************************************************************
+REPONSIVE
+*************************************************************/
+
+
+@media screen and (max-width: 1920px) {
+    .header-background  img{
+        
+    }
+    
+    .header-bloc-title {
+        padding-left: 150px;
+    }
+    
+    .header-Login-Logout, .header-register {
+        
+        padding-right: 150px;
+        text-align: right;
+    }
+    
+    .header-about-link {
+        top: 30rem;
+        left: 14rem
+    }
+    
+    .header-navbar {
+        padding: 0;
+    }
+    
+    .header-navbar a{       
+        font-size: 30px;
+        padding: 40px 30px;
+        font-weight: 502;
+    }
+}
+
+@media screen and (max-width: 1919px) /* and (max-width: 640px) */ {
+    .header-bloc-title {
+        padding-left: 0px;
+    }
+    
+    .header-Login-Logout, .header-register {
+        
+        padding-right: 0px;
+        text-align: right;
+    }
+    
+    .header-about-link {
+        top: 30rem;
+        left: 14rem
+    }
+    
+    .header-navbar {
+        margin-left: 100px;
+        margin-right: 0px;
+    }
+    
+    .header-navbar a{       
+        font-size: 25px;
+        padding: 40px 30px;
+        font-weight: 502;
+    }
+}
+
+@media screen and (max-width: 1500px) /* and (max-width: 640px) */ {
+    .header-navbar a{       
+        font-size: 20px;
+        padding: 40px 30px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 1400px) /* and (max-width: 640px) */ {
+    .header-content {
+        height: 20rem;
+    }
+
+    .header-background  img{
+        visibility: hidden;
+    }
+    
+    .header-background {
+        background-color: #343840;
+    }
+
+    .header-about-link {
+        top: 8rem;
+        left: 14rem
+    }
+    
+    .header-navbar {
+        top: 4rem;
+    }
+
+    .header-navbar a{       
+        /* Passage à des icones */
+    }
 }

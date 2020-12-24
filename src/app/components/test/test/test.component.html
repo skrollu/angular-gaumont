@@ -1,0 +1,36 @@
+<div class="test-container">
+    <div class="slider" >
+        <div class="slide-row" [style.transform]="'translateX('+ slideX +'%)'">
+            <div class="slide" *ngFor="let item of slideArray" >
+                <p> {{ item }} </p>
+            </div>
+        </div>
+        <button id="goLeft" (click)="goLeft()">Left</button>
+        <button id="goRight" (click)="goRight()">Right</button>
+    </div>
+    
+    
+    <div class="slider">
+        <div class="slide-row" [style.transform]="'translateX('+ slideX +'%)'">
+            <div class="slide" *ngFor="let movie of movies">
+                <app-movie-card [movie]="movie">
+                </app-movie-card>
+            </div>
+        </div>
+        <button id="goLeft" (click)="nextMovies()">Left</button>
+        <button id="goRight" (click)="previousMovies()">Right</button> 
+    </div>
+    
+    
+    <br />
+    <br />
+    <br />
+    <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+        <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+    </div>
+    
+    <button (click)="toggle()">click me</button>
+    
+</div>
+
+
