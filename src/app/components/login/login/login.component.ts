@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username: string;
+  email: string;
   password: string;
   error: string;
   
@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   
   ngOnInit(): void {
     this.loginForm =  new FormGroup({
-      username: new FormControl(this.username, [
+      email: new FormControl(this.email, [
         Validators.required,
         //Validators.minLength(4),
         //forbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom validator.
@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
   }
   
   loginSubmit(){
-    if(this.username != null && this.password != null) {
-      this.loginService.login(this.username, this.password).subscribe( data => {
+    if(this.email != null && this.password != null) {
+      this.loginService.login(this.email, this.password).subscribe( data => {
         
         if( (data as any).logged ){
           this.router.navigate(['/']);

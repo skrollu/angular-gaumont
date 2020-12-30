@@ -1,17 +1,16 @@
 .movies-grid-content {
   margin: 0 150px;
-  padding: 0 50px;
   height: 100%;
   
   background-color: white;
 }
 
 .movies-grid-bloc {
-  padding: 50px  0;
+  padding: 0  0;
 }
 
 .movies-grid-title {
-  padding: 0 50px 50px 50px;
+  padding: 100px 50px 50px 50px;
 }
 
 .movies-slider {
@@ -20,8 +19,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
 
+  overflow: hidden;
+}
 
 .movies-slide-row { 
   margin: 0 100px;
@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   transition: 1s;
 }
 
@@ -86,11 +86,21 @@
 ************* EVENT GRID ***************
 */
 
+.movies-event-bloc {
+  margin: 200px 0 0 0;
+  padding: 100px 0 200px 0;
+  background-color: #343840;
+}
+
+.event-title h1{
+  color: white;
+}
+
 .movies-event-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*
@@ -101,11 +111,13 @@
   border: solid 12px rgb(44, 44, 42);
   border-radius: 5px;
   
-  height: 500px;
-  width: 350px;
-  
   overflow: hidden;
   margin: 0 30px;
+}
+
+.event-card-size {
+  height: 700px;
+  width: 500px;
 }
 
 .movies-event-card:hover 
@@ -135,6 +147,12 @@
   color: rgb(255, 255, 255);
 }
 
+/**********************SEPARATOR*****************************/
+
+.content-separator {
+  height: 100px;
+  background-color: rgb(233, 232, 232);
+}
 
 /*************************************************************
 REPONSIVE
@@ -144,16 +162,43 @@ REPONSIVE
   .movies-grid-content {
     margin: 0 0 0 150px;
   }
+  
+  .event-card-size {
+    height: 700px;
+    width: 500px;
+  }
 }
 
 @media screen and (max-width: 1919px) /* and (max-width: 640px) */ {
   .movies-grid-content {
     margin: 0 0 0 100px;
   }
+  
+  .event-card-size {
+    height: 625px;
+    width:450px;
+  }
+  
+  .movies-event-grid {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1 1;
+  }
 }
 
 @media screen and (max-width: 1500px) /* and (max-width: 640px) */ {
   .movies-grid-content {
     margin: 0 0 0 100px;
+  }
+  
+  .event-card-size {
+    height: 550px;
+    width: 275px;
+  }
+}
+
+@media screen and (max-width: 1400px) /* and (max-width: 640px) */ {
+  .movies-grid-content {
+    margin: 0 0 0 0;
   }
 }

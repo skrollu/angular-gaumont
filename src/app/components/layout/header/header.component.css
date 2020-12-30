@@ -1,9 +1,8 @@
 .header-content {
     height: 50rem;
-}
-
-.header-background {
-    background-color: grey;
+    
+    position: relative;
+    overflow: hidden;
 }
 
 .header-background img {
@@ -11,9 +10,7 @@
     width: 100%;
 }
 
-.header-front{
-    z-index: 2;
-    
+.header-front{   
     width: 100%;
     position: absolute;
     top: 0px;
@@ -89,7 +86,7 @@
 
 .header-about-link {
     position: absolute;
-    top: 31rem;
+    top: 28rem;
     left: 8rem;
     height: 3rem;
 }
@@ -110,6 +107,36 @@
 
 .header-about-link a:hover {
     background-color:rgb(255, 230, 0);
+}
+
+/*
+************** EVENT **************
+*/
+
+.header-event {
+    position: absolute;
+    top: 27rem;   
+    transform: translateX(80%);
+    overflow: hidden;
+    cursor: default;
+}
+
+.header-event-row {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: x-large;
+    color: white;
+    white-space: nowrap; 
+    animation: publicite 10s linear infinite;
+}
+
+@keyframes publicite {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 /*
@@ -145,7 +172,82 @@
 .header-navbar a:hover{
     text-decoration: none;
     background-color: rgba(177, 177, 177, 0.411);
-    border-bottom:rgb(255, 255, 0) 6px solid;
+    /* border-bottom:rgb(255, 255, 0) 6px solid; */
+}
+
+.header-navbar a img {
+    color: red;
+    height: 40px;
+}
+
+/*************************************************************
+SIDE BAR
+*************************************************************/
+
+.sidebar {
+    /* see the header component.ts to see the animation code */
+    background-color: #343840;
+    color: white;
+}
+
+.sidebar-close-button-container {
+    width: 100%;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    
+}
+
+#sidebarCloseButtonId {
+    padding: 6px 15px;
+    
+    border: none;
+    background: none;
+    outline: none;
+    
+    font-size: 35px;
+    
+    cursor: pointer;
+    background-color: rgb(175, 175, 175);
+    border-radius: 5px;
+}
+
+#sidebarCloseButtonId:hover {
+    color: white;
+}
+
+.sidebar h1, p, h3 {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.sidebar h1, h3 {
+    font-size: 40px;
+}
+
+.contact-list ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left: 100px;
+    margin-top: 50px;
+    list-style: none;
+}
+
+.contact-list ul li {
+    margin-top: 10px;
+}
+
+.contact-list ul li img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.contact-list ul li a {
+    color: white;
+    text-decoration: underline;
+    font-size: 30px;
 }
 
 /*************************************************************
@@ -224,7 +326,7 @@ REPONSIVE
     .header-content {
         height: 20rem;
     }
-
+    
     .header-background  img{
         visibility: hidden;
     }
@@ -232,17 +334,22 @@ REPONSIVE
     .header-background {
         background-color: #343840;
     }
-
+    
     .header-about-link {
-        top: 8rem;
-        left: 14rem
+        top: 10rem;
+        left: 10rem;
     }
     
     .header-navbar {
         top: 4rem;
     }
-
+    
     .header-navbar a{       
         /* Passage à des icones */
+    }
+
+    .header-event {
+        top: 10rem;
+        transform: translateX(70%);
     }
 }

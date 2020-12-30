@@ -9,20 +9,21 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class RegisterComponent implements OnInit {
   username: string;
+  email: string;
   password: string;
   error: string;
   
   constructor(private loginService: LoginService, private router: Router) { }
   
   ngOnInit(): void {
-    this.username, this.password, this.error = null;
+    this.username, this.email, this.password, this.error = null;
   }
   
   registerSubmit(){
-    this.loginService.register(this.username, this.password).subscribe( data => {
+    this.loginService.register(this.username, this.email, this.password).subscribe( data => {
       console.log(data)
       if( (data as any).registered ){
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       } else {
         this.error = (data as any).error;
       }
