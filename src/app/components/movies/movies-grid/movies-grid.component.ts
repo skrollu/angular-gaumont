@@ -18,17 +18,21 @@ export class MovieComponent implements OnInit {
   loading = true;
   error: any;
   
-  slideInc: number = 90;
+  slideInc: number = 33;
   slideX: number = 0;
   displayedCardNumber: number = 4;
   
   constructor(private movieService: MovieService) { }
   
+  public innerWidth: any;
+
   ngOnInit(): void {
     /* this.movies = this.movieService.getMoviesGraphQL()  */
     this.movieService.getMovies().subscribe( (result /*: MoviesResponse */) => {
       this.movies = (result as any).movies as Movie[]
     })
+
+    this.innerWidth = window.innerWidth;
   }
   
   previousMovies(): void  {

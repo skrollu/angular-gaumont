@@ -9,10 +9,12 @@
         
         
         <div class="movies-slider">
-            <div class="movies-slide-row"  [style.transform]="'translateX('+ slideX +'%)'">
-                <div class="slide" *ngFor="let movie of movies" >
-                    <app-movie-card [movie]="movie">
-                    </app-movie-card>
+            <div class="movies-slide-row-container">
+                <div class="movies-slide-row"  [style.transform]="'translateX('+ slideX +'%)'">
+                    <div class="slide" *ngFor="let movie of movies" >
+                        <app-movie-card [movie]="movie">
+                        </app-movie-card>
+                    </div>
                 </div>
             </div>
             
@@ -32,12 +34,9 @@
                 </h1>
             </div>
             <div class="movies-event-grid">
-                <div class="movies-event-card event-card-size">
+                <div class="movies-event-grid-item movies-event-card event-card-size">
                     <div class="movies-event-card-front">
-                        <img
-                            src="../../../../assets/images/wonder-woman.jpg"
-                            class="event-card-size"
-                        />
+                        <img src="../../../../assets/images/wonder-woman.jpg" class="event-card-size" />
                     </div>
                     <div class="movies-event-card-back">
                         <h3>Wonder Woman 1984</h3>
@@ -45,7 +44,7 @@
                     </div>
                 </div>
                 
-                <div class="movies-event-card event-card-size">
+                <div class="movies-event-grid-item  movies-event-card event-card-size">
                     <div class="movies-event-card-front">
                         <img src="../../../../assets/images/james-bond.webp" class="event-card-size" />
                     </div>
@@ -55,7 +54,7 @@
                     </div>
                 </div>
                 
-                <div class="movies-event-card event-card-size">
+                <div class="movies-event-grid-item  movies-event-card event-card-size">
                     <div class="movies-event-card-front">
                         <img src="../../../../assets/images/Black-Widow.webp" class="event-card-size" />
                     </div>
@@ -65,7 +64,7 @@
                     </div>
                 </div>
                 
-                <div class="movies-event-card event-card-size">
+                <div class="movies-event-grid-item  movies-event-card event-card-size">
                     <div class="movies-event-card-front">
                         <img src="../../../../assets/images/hunger-games3.jpg" class="event-card-size" />
                     </div>

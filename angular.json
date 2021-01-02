@@ -122,5 +122,10 @@
       }
     }
   },
-  "defaultProject": "myApi-website-angular"
+  "defaultProject": "myApi-website-angular",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "sass"
+    }
+  }
 }

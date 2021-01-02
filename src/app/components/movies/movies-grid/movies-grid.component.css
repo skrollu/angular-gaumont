@@ -5,13 +5,13 @@
   background-color: white;
 }
 
-.movies-grid-bloc {
-  padding: 0  0;
+.movies-grid-title {
+  padding: 100px 0px 50px 50px;
 }
 
-.movies-grid-title {
-  padding: 100px 50px 50px 50px;
-}
+/************************************************************
+SLIDER
+************************************************************/
 
 .movies-slider {
   width: 100%;
@@ -19,13 +19,25 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  
+  height: 675px;
   overflow: hidden;
 }
 
-.movies-slide-row { 
-  margin: 0 100px;
+.movies-slide-row-container {
+  position: absolute;
+  height: 100%;
+  width: 92%;
   
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  
+  margin: 0 100px;
+}
+
+.movies-slide-row {  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,12 +80,12 @@
 
 #goLeft {
   
-  left: 0;
+  left: 10px;
 }
 
 #goRight {
   
-  right: 0;
+  right: 10px;
 }
 
 #movies-button-id:hover {
@@ -88,7 +100,6 @@
 
 .movies-event-bloc {
   margin: 200px 0 0 0;
-  padding: 100px 0 200px 0;
   background-color: #343840;
 }
 
@@ -97,10 +108,12 @@
 }
 
 .movies-event-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr [col-start]);
+  justify-items: center;
+  gap: 100px 0;
+
+  padding-bottom: 100px;
 }
 
 /*
@@ -112,7 +125,6 @@
   border-radius: 5px;
   
   overflow: hidden;
-  margin: 0 30px;
 }
 
 .event-card-size {
@@ -162,7 +174,7 @@ REPONSIVE
   .movies-grid-content {
     margin: 0 0 0 150px;
   }
-  
+
   .event-card-size {
     height: 700px;
     width: 500px;
@@ -173,14 +185,25 @@ REPONSIVE
   .movies-grid-content {
     margin: 0 0 0 100px;
   }
-  
-  .event-card-size {
-    height: 625px;
-    width:450px;
+
+  .movies-slider {
+    height: 600px;
+  }
+
+  .movies-slide-row-container {
+    width: 80%;
   }
   
   .movies-event-grid {
-    margin-top: 150px;
+    grid-template-columns: repeat(2, 1fr [col-start]);
+  }
+
+  .event-card-size {
+    height: 700px;
+    width: 500px;
+  }
+  
+  .movies-event-grid {
     display: grid;
     grid-template-columns: 1 1;
   }
@@ -191,14 +214,25 @@ REPONSIVE
     margin: 0 0 0 100px;
   }
   
-  .event-card-size {
-    height: 550px;
-    width: 275px;
+  .movies-slider {
+    height: 500px;
+  }
+
+  .movies-slide-row-container {
+    width: 83%;
   }
 }
 
 @media screen and (max-width: 1400px) /* and (max-width: 640px) */ {
   .movies-grid-content {
     margin: 0 0 0 0;
+  }
+  
+  .movies-slide-row-container {
+    width: 83%;
+  }
+
+  .movies-event-grid {
+    grid-template-columns: repeat(1, 1fr [col-start]);
   }
 }
