@@ -115,10 +115,15 @@
 
 .header-event {
     position: absolute;
-    top: 27rem;   
-    transform: translateX(80%);
+    top: 32rem;
+    left: 50%;
+    width: 1000px;
+    transform: translateX(-50%);
     overflow: hidden;
     cursor: default;
+    white-space: nowrap;
+
+    display: flex;
 }
 
 .header-event-row {
@@ -126,13 +131,12 @@
     font-size: 40px;
     font-weight: x-large;
     color: white;
-    white-space: nowrap; 
     animation: publicite 10s linear infinite;
 }
 
 @keyframes publicite {
     from {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
     to {
         transform: translateX(-100%);

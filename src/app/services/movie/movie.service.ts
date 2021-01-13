@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';  // Injectable allows us to inject this service in a constructor of a component
 import { HttpClient, HttpHeaders} from '@angular/common/http'
-import { Movie } from '../models/Movie'
+import { Movie } from '../../models/Movie'
 import { Observable } from 'rxjs';
 import { gql, Apollo } from 'apollo-angular';
-
 
 const httpOptions = {
   headers: new HttpHeaders({

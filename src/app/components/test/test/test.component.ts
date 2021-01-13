@@ -9,7 +9,7 @@ import {
 } from '@angular/animations';
 
 import { Movie } from '../../../models/Movie'
-import { MovieService } from '../../../services/movie.service'
+import { MovieService } from '../../../services/movie/movie.service'
 
 @Component({
   selector: 'app-test',

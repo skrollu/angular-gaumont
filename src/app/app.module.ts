@@ -18,6 +18,7 @@ import { RegisterComponent } from './components/login/register/register.componen
 import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap.component';
 import { TestComponent } from './components/test/test/test.component';
 import { Test2Component } from './components/test/test2/test2.component';
+import { CinemaMaap2Component } from './components/cinema/cinema-maap2/cinema-maap2.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { Test2Component } from './components/test/test2/test2.component';
     RegisterComponent,
     CinemaMaapComponent,
     TestComponent,
-    Test2Component
+    Test2Component,
+    CinemaMaap2Component
   ],
   imports: [
     BrowserModule,
