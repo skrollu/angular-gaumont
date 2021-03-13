@@ -1,27 +1,23 @@
-# MyApiWebsiteAngular
+# About the project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+It's website inspired by the Gaumont website. It's not a copy ! With it I learn about Angular technologies and also my API project: https://github.com/skrollu/express-mongo-api
 
-## Development server
+# How to run this project ?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## With Docker
 
-## Code scaffolding
+Thanks to the Dockerfile at the root of the project, you can simply run it with command line:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    docker build . -t angular-gaumont:1.0.0
 
-## Build
+Then: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    docker run -p 4201:4201 angular-gaumont:1.0.0
 
-## Running unit tests
+## With npm
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run: 
+    npm install
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Then: 
+    npm start

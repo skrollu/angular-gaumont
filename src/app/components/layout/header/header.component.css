@@ -223,10 +223,14 @@ SIDE BAR
 .sidebar h1, p, h3 {
     margin-top: 25px;
     margin-left: 25px;
+    margin-right: 10px;
 }
 
 .sidebar h1, h3 {
     font-size: 40px;
+}
+.sidebar p {
+    text-align: justify;
 }
 
 .contact-list ul {
