@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   error: string;
   
   loginForm: FormGroup;
-
+  
   constructor(private loginService: LoginService, private router: Router) { }
   
   ngOnInit(): void {
@@ -44,5 +44,20 @@ export class LoginComponent implements OnInit {
     } else {
       //this.error = "Les champs doivent être remplis"
     }
+  }
+  
+  facebook(){
+    console.log("facebook");
+    this.loginService.facebook().subscribe( (result /*: MoviesResponse */) => {
+      console.log("subscrieb " + result)
+    })
+  }
+  
+  twitter(){
+    console.log("twitter")
+  }
+  
+  google(){
+    console.log("google")
   }
 }

@@ -28,4 +28,9 @@ export class LoginService {
   public logout(): Observable<any> {
     return this.http.get<any[]>('/api/users/logout', httpOptions);
   }
+
+  public facebook(): Observable<any> {
+    console.log("service")
+    return this.http.get<any[]>('/api/users/auth/facebook', httpOptions);
+  }
 }
