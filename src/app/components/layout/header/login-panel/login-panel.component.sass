@@ -1,0 +1,31 @@
+$text-color: white
+$btn-background-color: rgba(128, 128, 128, 0.486)
+$btn-hover-background-color:rgba(128, 128, 128, 0.233)
+
+.header-login
+    position: absolute
+    top: 10px
+    right: 25px
+
+    .header-login-logout
+        a
+            color: $text-color
+            text-decoration: none
+            font-size: 35px
+            font-weight: bold
+            transition: color 0.3s
+            &:hover
+                color: #e2dbdb
+
+    .header-register
+        padding: 5px
+        background-color: $btn-background-color
+        border-radius: 15px
+        text-align: center
+        transition: background-color 0.3s
+        &:hover
+            background-color: $btn-hover-background-color
+        a
+            color: white
+            text-decoration: none
+            font-size: 24px

@@ -1,0 +1,41 @@
+$nav-link-bgc: rgba(177, 177, 177, 0.411)
+    
+.header-navbar
+    position: absolute
+    margin: 0 150px
+    bottom: 0
+
+    display: flex
+    justify-content: space-around
+    
+    .header-link
+        cursor: pointer
+        padding: 10px 50px
+        transition: background-color .3s ease-in-out
+        &:hover
+            background-color: $nav-link-bgc
+        a
+            color: white
+            text-decoration: none
+
+    
+@media screen and (max-width: 1920px)
+    .header-link 
+        a       
+            font-size: 30px
+    
+@media screen and (max-width: 1919px)
+    .header-navbar 
+        margin-left: 100px
+        margin-right: 0px
+        a       
+            font-size: 15px   
+            font-weight: bold
+        
+@media screen and (max-width: 1500px)
+    .header-link
+        padding: 10px 30px
+
+@media screen and (max-width: 1400px) 
+    /* Passage à des icones */
+    

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/services/login/login.service';
+
 import {
   trigger,
   state,
@@ -12,7 +12,7 @@ import {
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['./header.component.sass'],
   animations: [
     // animation triggers go here
     trigger('openClose', [
@@ -46,23 +46,14 @@ import {
   ],
 })
 export class HeaderComponent implements OnInit {
-  logged: boolean = false;
-  
   isOpen: boolean = false;
   
   toggle() {
     this.isOpen = !this.isOpen;
   }
   
-  constructor(private loginService: LoginService) { }
+  constructor() { }
   
   ngOnInit(): void {
   }
-  
-  logout() {
-    this.loginService.logout().subscribe( data => {
-      console.log(data)
-    })
-  }
-  
 }

@@ -19,6 +19,10 @@ import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap
 import { TestComponent } from './components/test/test/test.component';
 import { Test2Component } from './components/test/test2/test2.component';
 import { CinemaMaap2Component } from './components/cinema/cinema-maap2/cinema-maap2.component';
+import { NavBarComponent } from './components/layout/header/nav-bar/nav-bar.component';
+import { SidebarComponent } from './components/layout/header/sidebar/sidebar.component';
+import { ImportantAddComponent } from './components/layout/header/important-add/important-add.component';
+import { LoginPanelComponent } from './components/layout/header/login-panel/login-panel.component';
 
 
 @NgModule({
@@ -35,7 +39,11 @@ import { CinemaMaap2Component } from './components/cinema/cinema-maap2/cinema-ma
     CinemaMaapComponent,
     TestComponent,
     Test2Component,
-    CinemaMaap2Component
+    CinemaMaap2Component,
+    NavBarComponent,
+    SidebarComponent,
+    ImportantAddComponent,
+    LoginPanelComponent
   ],
   imports: [
     BrowserModule,

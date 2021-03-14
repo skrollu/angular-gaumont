@@ -1,0 +1,53 @@
+$header-banner-height: 80vh
+$btn-color:  rgb(240, 240, 0)
+$btn-color-hover:  rgb(240, 224, 0)
+    
+.header-content
+    height: $header-banner-height
+    z-index: 0
+    position: relative
+    overflow: hidden
+
+    .header-background
+        position: absolute
+        z-index: 1
+        height: 100%
+        width: 100%
+
+        img
+            height: $header-banner-height
+            width: 100%
+            
+    .header-front
+        position: absolute
+        z-index: 2
+        color: white
+        height: 100%
+        width: 100%
+
+        .header-title
+            h3 
+                padding-top: 5px
+                padding-left: 10px
+            h1
+                padding-left: 30px
+
+        .header-about-link
+            position: absolute
+            top: 30rem
+            left: 5rem
+            
+            a                
+                padding: 5px 70px
+                font-size: 30px
+                background-color: $btn-color
+                border-radius: 15px
+                text-decoration: none
+                color: black
+                transition: background-color .3s ease-in-out
+                &:hover
+                    background-color: $btn-color-hover
+                    
+            
+
+        
