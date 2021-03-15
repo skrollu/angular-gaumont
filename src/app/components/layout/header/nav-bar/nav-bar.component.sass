@@ -1,14 +1,10 @@
 $nav-link-bgc: rgba(177, 177, 177, 0.411)
     
-.header-navbar
-    position: absolute
-    margin: 0 150px
-    bottom: 0
-
+.navbar
     display: flex
     justify-content: space-around
     
-    .header-link
+    .navbar-link
         cursor: pointer
         padding: 10px 50px
         transition: background-color .3s ease-in-out
@@ -20,20 +16,18 @@ $nav-link-bgc: rgba(177, 177, 177, 0.411)
 
     
 @media screen and (max-width: 1920px)
-    .header-link 
+    .navbar-link 
         a       
             font-size: 30px
     
 @media screen and (max-width: 1919px)
-    .header-navbar 
-        margin-left: 100px
-        margin-right: 0px
+    .navbar-link 
         a       
-            font-size: 15px   
+            font-size: 25px   
             font-weight: bold
         
 @media screen and (max-width: 1500px)
-    .header-link
+    .navbar-link
         padding: 10px 30px
 
 @media screen and (max-width: 1400px) 

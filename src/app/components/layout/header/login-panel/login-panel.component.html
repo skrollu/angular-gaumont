@@ -1,10 +1,10 @@
-<div class="header-login" *ngIf="logged == false">
-    <div class="header-login-logout">
+<div class="login-panel" *ngIf="logged == false">
+    <div class="login-panel-sign">
         <a routerLink="/login">Me connecter</a>
         <!--  /
                         <a routerLink="/" (click)="logout()">Logout</a> -->
     </div>
-    <div class="header-register" routerLink="/register">
+    <div class="login-panel-register" routerLink="/register">
         <a>Créer un compte</a>
     </div>
 </div>
