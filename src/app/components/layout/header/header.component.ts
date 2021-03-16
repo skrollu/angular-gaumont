@@ -45,6 +45,7 @@ import {
     ])
   ],
 })
+
 export class HeaderComponent implements OnInit {
   isOpen: boolean = false;
   

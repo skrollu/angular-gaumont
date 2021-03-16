@@ -6,7 +6,7 @@
     </div>
     <div class="header-front">
         
-        <div class="header-title">
+        <div class="header-title" routerLink='/'>
             <div>
                 <h3>𝓁𝑒𝓈 𝒸𝒾𝓃𝑒𝓂𝒶𝓈</h3>
             </div>
@@ -16,8 +16,8 @@
         </div>
 
         
-        <div (click)="toggle()" class="header-about-link">
-            <a routerLink="/">En savoir plus sur moi...</a>
+        <div  [@openClose]="isOpen ? 'open' : 'closed'" (click)="toggle()" class="header-about-link">
+            <a routerLink="/">En savoir plus sur moi... {{ isOpen ? 'Open' : 'Closed' }}</a>
         </div>
         
         <div class="header-login-panel">
