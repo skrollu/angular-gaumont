@@ -1,0 +1,58 @@
+
+$sidebar-bgc: #343840
+$btn-openClose-bgc: rgb(175, 175, 175)
+
+.sidebar
+    position: sticky
+    height: 100vh
+    background-color: $sidebar-bgc
+    color: white
+
+    .sidebar-close-button-container 
+        width: 100%
+        text-align: right
+        padding-top: 20px
+        padding-right: 20px
+        
+        #sidebarCloseButtonId 
+            padding: 6px 15px
+            border: none
+            background: none
+            outline: none
+            font-size: 25px
+            cursor: pointer
+            background-color: $btn-openClose-bgc
+            border-radius: 10px
+            transition: background-color 0.3s ease-in-out
+
+            &:hover
+                background-color: white    
+    h1, p, h3
+        margin: 0 10px
+    h1, h3
+        margin-top: 10px
+        font-size: 30px
+    p
+        font-size: 20px
+        text-align: justify
+        margin-left: 15px
+        
+    .contact-list
+        ul
+            display: flex
+            flex-direction: column
+            justify-content: center
+            margin-left: 50px
+            margin-top: 20px
+            list-style: none
+            
+            li 
+            
+                margin-top: 10px
+                img 
+                    height: 20px
+                    margin-right: 10px
+                a 
+                    color: white
+                    text-decoration: underline
+                    font-size: 20px
