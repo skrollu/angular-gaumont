@@ -11,7 +11,9 @@ $btn-hover-background-color:rgba(128, 128, 128, 0.233)
             font-weight: bold
             transition: color 0.3s
             &:hover
-                color: #e2dbdb
+                background-clip: text
+                -webkit-background-clip: text
+                -webkit-text-stroke: 1px #bbbbbb
 
     .login-panel-register
         padding: 5px

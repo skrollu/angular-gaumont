@@ -1,0 +1,85 @@
+/*
+  The flip card container - set the width and height to whatever you want. 
+  We have added the border property to demonstrate that the flip itself goes out
+  of the box on hover (remove perspective if you don't want the 3D effect  */
+$card-border-radius: 7px
+$card-height: 600px
+$card-width: 400px
+$text-font-size: 20px
+$line-height: 24px
+$text-nb-lines: 3
+
+.movie-card-border 
+  border-radius: $card-border-radius
+
+.movie-card-size 
+  height: $card-height
+  width: $card-width
+  object-fit: cover
+
+.movie-card 
+  /* border: 1px solid #f1f1f1; */
+  background-color: transparent
+  /* Remove this if you don't want the 3D effect */
+  perspective: 1000px
+ 
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  &:hover
+    .movie-card-inner 
+      transform: rotateY(-180deg)
+
+  /* This container is needed to position the front and back side */
+  .movie-card-inner 
+    position: relative
+    width: 100%
+    height: 100%
+    text-align: left
+    transition: transform 0.8s
+    transform-style: preserve-3d
+
+  /* Position the front and back side */
+  .movie-card-front, .movie-card-back 
+    position: absolute
+    width: 100%
+    height: 100%
+    /* Safari */
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+  /* Style the front side (fallback if image is missing) */
+  .movie-card-front
+    background-color: rgb(94, 94, 94)
+    color: black
+
+  /* Style the back side */
+  .movie-card-back 
+    background-color: #343840
+    color: white
+    transform: rotateY(-180deg)
+    padding: 5px
+
+    p
+      font-size: $text-font-size
+      line-height: $line-height
+      max-height: calc( $line-height * $text-nb-lines )
+      text-align: justify    
+      padding: 0 15px 0 5px
+      position: relative
+
+      &::after
+        content: "..."    
+
+@media screen and (max-width: 1920px) 
+  .movie-card-size 
+    height: 550px
+    width: 375px
+
+@media screen and (max-width: 1919px) 
+  .movie-card-size 
+    height: 500px
+    width: 350px
+  
+@media screen and (max-width: 1500px) 
+  .movie-card-size 
+    height: 400px
+    width: 275px
