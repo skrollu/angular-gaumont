@@ -7,7 +7,7 @@ $card-height: 600px
 $card-width: 400px
 $text-font-size: 20px
 $line-height: 24px
-$text-nb-lines: 3
+$text-nb-lines: 5
 
 .movie-card-border 
   border-radius: $card-border-radius
@@ -58,16 +58,20 @@ $text-nb-lines: 3
     transform: rotateY(-180deg)
     padding: 5px
 
-    p
-      font-size: $text-font-size
+    .card-descrition
       line-height: $line-height
-      max-height: calc( $line-height * $text-nb-lines )
-      text-align: justify    
+      max-height: calc( #{$text-nb-lines} * #{$line-height} )
+      overflow: hidden
+      font-size: $text-font-size
+      text-align: justify
+      margin: 10px 0
       padding: 0 15px 0 5px
       position: relative
-
       &::after
-        content: "..."    
+        content: "..."
+        position: absolute
+        bottom: 0
+        right: 0
 
 @media screen and (max-width: 1920px) 
   .movie-card-size 
