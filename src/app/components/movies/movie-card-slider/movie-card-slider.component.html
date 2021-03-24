@@ -1,0 +1,16 @@
+<div class="movie-card-slider">
+    <button class="btn btn-left" (click)="previous()">
+        <img src="../../../../assets/images/chevron-left.svg" class="icone">
+    </button>
+
+    <div class="container-slides" [style.transform]="'translateX('+ index +'px)'">
+        <div class="container-card" *ngFor="let movie of movies">
+            <app-movie-card [movie]="movie">
+            </app-movie-card>
+        </div>
+    </div>
+
+    <button class="btn btn-right" (click)="next()">
+        <img src="../../../../assets/images/chevron-right.svg" class="icone">
+    </button>
+</div>

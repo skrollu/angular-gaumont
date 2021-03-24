@@ -57,21 +57,30 @@ $text-nb-lines: 5
     color: white
     transform: rotateY(-180deg)
     padding: 5px
-
+    /** 
+      .card-descrition
+        line-height: $line-height
+        max-height: calc( #{$text-nb-lines} * #{$line-height} )
+        overflow: hidden
+        font-size: $text-font-size
+        text-align: justify
+        margin: 10px 0
+        padding: 0 15px 0 5px
+        position: relative
+        &::after
+          content: "..."
+          position: absolute
+          bottom: 0
+          right: 0
+      */
+    /* Non standard but simplier to implement */        
     .card-descrition
-      line-height: $line-height
-      max-height: calc( #{$text-nb-lines} * #{$line-height} )
-      overflow: hidden
-      font-size: $text-font-size
+      margin: 10px 5px
       text-align: justify
-      margin: 10px 0
-      padding: 0 15px 0 5px
-      position: relative
-      &::after
-        content: "..."
-        position: absolute
-        bottom: 0
-        right: 0
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: $text-nb-lines
+      overflow: hidden
 
 @media screen and (max-width: 1920px) 
   .movie-card-size 

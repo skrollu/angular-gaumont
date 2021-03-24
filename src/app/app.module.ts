@@ -23,7 +23,7 @@ import { NavBarComponent } from './components/layout/header/nav-bar/nav-bar.comp
 import { SidebarComponent } from './components/layout/header/sidebar/sidebar.component';
 import { ImportantAddComponent } from './components/layout/header/important-add/important-add.component';
 import { LoginPanelComponent } from './components/layout/header/login-panel/login-panel.component';
-
+import { MovieCardSliderComponent } from './components/movies/movie-card-slider/movie-card-slider.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { LoginPanelComponent } from './components/layout/header/login-panel/logi
     NavBarComponent,
     SidebarComponent,
     ImportantAddComponent,
-    LoginPanelComponent
+    LoginPanelComponent,
+    MovieCardSliderComponent,
   ],
   imports: [
     BrowserModule,

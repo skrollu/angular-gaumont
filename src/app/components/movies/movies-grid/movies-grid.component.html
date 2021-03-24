@@ -1,29 +1,15 @@
-<div class="movies-grid-content">
+<div class="movies-grid-content" >
     
-    <div class="movies-grid-bloc">
-        <div class="movies-grid-title">
-            <h1>
-                À l'affiche cette semaine
-            </h1>
-        </div>
-        
-        
-        <div class="movies-slider">
-            <div class="movies-slide-row-container">
-                <div class="movies-slide-row"  [style.transform]="'translateX('+ slideX +'%)'">
-                    <div class="slide" *ngFor="let movie of movies" >
-                        <app-movie-card [movie]="movie">
-                        </app-movie-card>
-                    </div>
-                </div>
-            </div>
-            
-            <button id="goLeft" (click)="previousMovies()"><</button>
-            <button id="goRight" (click)="nextMovies()">></button>
-            
-        </div>
-        
+    
+    <div class="movies-grid-title">
+        <h1>
+            À l'affiche cette semaine
+        </h1>
     </div>
+    
+    <app-movie-card-slider>
+    </app-movie-card-slider>
+    
     
     
     <div class="movies-grid-bloc">
@@ -78,7 +64,7 @@
     </div>
     
     <div class="content-separator"></div>
-
+    
     <div class="movies-grid-bloc">
         <div class="movies-grid-title">
             <h1>
@@ -90,6 +76,6 @@
             <p>Ici faire des pages d'actualités rédigeables par des utilisateurs "semi-admin"</p>
         </div>
     </div>
-
+    
     <div class="content-separator"></div>
 </div>

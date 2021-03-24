@@ -1,97 +1,11 @@
 .movies-grid-content {
   margin: 0 150px;
   height: 100%;
-  
   background-color: white;
 }
 
 .movies-grid-title {
-  padding: 100px 0px 50px 50px;
-}
-
-/************************************************************
-SLIDER
-************************************************************/
-
-.movies-slider {
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  
-  height: 675px;
-  overflow: hidden;
-}
-
-.movies-slide-row-container {
-  position: absolute;
-  height: 100%;
-  width: 92%;
-  
-  overflow: hidden;
-  
-  display: flex;
-  align-items: center;
-  
-  margin: 0 100px;
-}
-
-.movies-slide-row {  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  transition: 1s;
-}
-
-.slide {
-  position: relative;
-  margin: 0 20px;
-}
-
-#goLeft, #goRight {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  
-  transition: .2s;
-  
-  cursor: pointer;
-  
-  
-  background-color: rgb(0, 0, 0);
-  opacity: 0.65;
-  color: rgb(214, 214, 214);
-  
-  padding: 15px 25px;
-  font-size: 50px;
-  
-  border-radius: 20px;
-  border: none;
-  
-  
-  transition: opacity 0.3s, color 0.3s;
-}
-
-#goLeft:hover, #goRight:hover {
-  opacity: 0.8;
-}
-
-#goLeft {
-  
-  left: 10px;
-}
-
-#goRight {
-  
-  right: 10px;
-}
-
-#movies-button-id:hover {
-  opacity: 75%;
-  color: white;
-  transition: 0.2s;
+  padding: 70px 0px 0 50px;
 }
 
 /*
@@ -112,7 +26,7 @@ SLIDER
   grid-template-columns: repeat(4, 1fr [col-start]);
   justify-items: center;
   gap: 100px 0;
-
+  
   padding-bottom: 100px;
 }
 
@@ -174,7 +88,7 @@ REPONSIVE
   .movies-grid-content {
     margin: 0 0 0 150px;
   }
-
+  
   .event-card-size {
     height: 700px;
     width: 500px;
@@ -185,11 +99,11 @@ REPONSIVE
   .movies-grid-content {
     margin: 0 0 0 100px;
   }
-
+  
   .movies-slider {
     height: 600px;
   }
-
+  
   .movies-slide-row-container {
     width: 80%;
   }
@@ -197,7 +111,7 @@ REPONSIVE
   .movies-event-grid {
     grid-template-columns: repeat(2, 1fr [col-start]);
   }
-
+  
   .event-card-size {
     height: 700px;
     width: 500px;
@@ -217,7 +131,7 @@ REPONSIVE
   .movies-slider {
     height: 500px;
   }
-
+  
   .movies-slide-row-container {
     width: 83%;
   }
@@ -231,7 +145,7 @@ REPONSIVE
   .movies-slide-row-container {
     width: 83%;
   }
-
+  
   .movies-event-grid {
     grid-template-columns: repeat(1, 1fr [col-start]);
   }
