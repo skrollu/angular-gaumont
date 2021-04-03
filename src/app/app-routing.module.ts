@@ -8,9 +8,15 @@ import { RegisterComponent } from './components/login/register/register.componen
 import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap.component';
 import { TestComponent } from './components/test/test/test.component';
 import { Test2Component } from './components/test/test2/test2.component';
+import { AccountViewComponent } from './components/account/account-view/account-view.component'
+
+import { 
+  AuthGuardService as AuthGuard 
+} from './services/login/auth-guard.service';
 
 const routes: Routes = [
     { path: '', component: MovieComponent },
+    { path: 'account', component: AccountViewComponent, canActivate: [AuthGuard] },
     { path: 'cinema', component: CinemaMaapComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },

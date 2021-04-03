@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/services/login/login.service';
+import { AuthService } from 'src/app/services/login/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-panel',
@@ -9,14 +10,20 @@ import { LoginService } from 'src/app/services/login/login.service';
 export class LoginPanelComponent implements OnInit {
   logged: boolean = false;
   
-  constructor(private loginService: LoginService) { }
+  constructor(private authService: AuthService, private router: Router) { }
   
   ngOnInit(): void {
   }
   
   logout() {
-    this.loginService.logout().subscribe( data => {
+    this.authService.logout().subscribe(data => {
       console.log(data)
+      this.authService.removeUserInfo();
+      this.router.navigate(['/']);
     })
+  }
+
+  isAuthenticated(): Boolean {
+    return this.authService.isAuthenticated()
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/services/login/login.service';
+import { AuthService } from 'src/app/services/login/auth.service';
 import { FormGroup, FormControl, Validators} from '@angular/forms'
 
 @Component({
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   
   loginForm: FormGroup;
   
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
   
   ngOnInit(): void {
     this.loginForm =  new FormGroup({
@@ -30,15 +30,16 @@ export class LoginComponent implements OnInit {
     });
   }
   
-  loginSubmit(){
+  login(){
     if(this.email != null && this.password != null) {
-      this.loginService.login(this.email, this.password).subscribe( data => {
-        
-        if( (data as any).logged ){
-          this.router.navigate(['/']);
+      this.authService.login(this.email, this.password).subscribe(data => {
+        if((data as any).error) {
+           console.log((data as any).error)
+          //this.error = (data as any).error.error.error;
         } else {
-          console.log((data as any).error)
-          this.error = (data as any).error.error.error;
+          this.authService.setUserInfo({'user' : data['user']});
+          this.router.navigate(['/']);
+          console.log(data)
         }
       });
     } else {
@@ -48,7 +49,7 @@ export class LoginComponent implements OnInit {
   
   facebook(){
     console.log("facebook");
-    this.loginService.facebook().subscribe( (result /*: MoviesResponse */) => {
+    this.authService.facebook().subscribe( (result /*: MoviesResponse */) => {
       console.log("subscrieb " + result)
     })
   }

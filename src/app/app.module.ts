@@ -24,6 +24,7 @@ import { SidebarComponent } from './components/layout/header/sidebar/sidebar.com
 import { ImportantAddComponent } from './components/layout/header/important-add/important-add.component';
 import { LoginPanelComponent } from './components/layout/header/login-panel/login-panel.component';
 import { MovieCardSliderComponent } from './components/movies/movie-card-slider/movie-card-slider.component';
+import { AccountViewComponent } from './components/account/account-view/account-view.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MovieCardSliderComponent } from './components/movies/movie-card-slider/
     ImportantAddComponent,
     LoginPanelComponent,
     MovieCardSliderComponent,
+    AccountViewComponent,
   ],
   imports: [
     BrowserModule,
