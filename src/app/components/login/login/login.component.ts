@@ -55,7 +55,10 @@ export class LoginComponent implements OnInit {
   }
   
   twitter(){
-    console.log("twitter")
+    console.log("facebook");
+    this.authService.twitter().subscribe( (result /*: MoviesResponse */) => {
+      console.log("subscrieb " + result)
+    })
   }
   
   google(){

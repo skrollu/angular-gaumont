@@ -3,11 +3,11 @@ import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { Login } from 'src/app/models/Login';
 import { Observable } from 'rxjs';
 
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
-  })
+  }),
+  mode: 'no-cors'
 }
 
 @Injectable({
@@ -31,7 +31,30 @@ export class AuthService {
 
   public facebook(): Observable<any> {
     console.log("service")
-    return this.http.get<any[]>('/api/users/auth/facebook', httpOptions);
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Authorization,Content-Type',
+        'Access-Control-Allow-Method': 'GET,POST,OPTIONS',
+      })
+    }
+    console.log(options)
+
+    return this.http.get<any[]>('/api/users/auth/facebook', options);
+  }
+  
+  public twitter(): Observable<any> {
+    console.log("service")
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://localhost:4000/api/users/auth/facebook/callback'
+      })
+    }
+    console.log(options)
+
+    return this.http.get<any[]>('/api/users/auth/twitter', options);
   }
 
   public isAuthenticated() : Boolean {

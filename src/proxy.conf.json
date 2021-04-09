@@ -2,7 +2,7 @@
     "/api/*": {
         "target": "http://localhost:4000",
         "secure": false,
-        "logLevel": "debug"
+        "logLevel": "info"
     },
     
     "/datas/*": {
@@ -11,7 +11,7 @@
         "logLevel": "debug"
     },
 
-    "/*": {
+    "*": {
         "secure": false,
         "logLevel": "debug"
     }

@@ -1,9 +1,11 @@
 <div class="login-panel">
     <div class="login-panel-sign">
         <a routerLink="/login" *ngIf="!isAuthenticated()">Me connecter</a>
-        <a routerLink="/" (click)="logout()" *ngIf="isAuthenticated()">Logout</a>
     </div>
     <div class="login-panel-register" routerLink="/register"  *ngIf="!isAuthenticated()">
         <a>Créer un compte</a>
+    </div>
+    <div class="login-panel-register" *ngIf="isAuthenticated()" (click)="logout()">
+        <a>Me déconnecter</a>
     </div>
 </div>
