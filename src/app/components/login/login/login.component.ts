@@ -12,11 +12,11 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   error: string;
-  
+
   loginForm: FormGroup;
-  
+
   constructor(private authService: AuthService, private router: Router) { }
-  
+
   ngOnInit(): void {
     this.loginForm =  new FormGroup({
       email: new FormControl(this.email, [
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       ]),
     });
   }
-  
+
   login(){
     if(this.email != null && this.password != null) {
       this.authService.login(this.email, this.password).subscribe(data => {
@@ -45,23 +45,5 @@ export class LoginComponent implements OnInit {
     } else {
       //this.error = "Les champs doivent être remplis"
     }
-  }
-  
-  facebook(){
-    console.log("facebook");
-    this.authService.facebook().subscribe( (result /*: MoviesResponse */) => {
-      console.log("subscrieb " + result)
-    })
-  }
-  
-  twitter(){
-    console.log("facebook");
-    this.authService.twitter().subscribe( (result /*: MoviesResponse */) => {
-      console.log("subscrieb " + result)
-    })
-  }
-  
-  google(){
-    console.log("google")
   }
 }

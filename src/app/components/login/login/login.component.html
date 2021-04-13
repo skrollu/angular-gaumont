@@ -5,7 +5,7 @@
         <div class="login-form-buble"></div>
         <div class="login-form-buble"></div>
         <div class="login-form-buble"></div>
-        
+
         <div *ngIf="error != null">
             <div class="login-form-error">
                 <p>
@@ -13,7 +13,7 @@
                 </p>
             </div>
         </div>
-        
+
         <form (ngSubmit)="login()">
             <div class="login-form-bloc">
                 <input type="email" name="email" [(ngModel)] = "email" placeholder="Email" required>
@@ -25,24 +25,24 @@
                 <button id="login-form-button-id" type="submit">Se connecter</button>
             </div>
         </form>
-        
+
         <div class="login-form-redirect">
             <a routerLink="/register">Vous n'avez pas en encore de compte ?</a>
         </div>
-        
+
         <div class="login-form-connectwith-container">
-            <a href="api/users/auth/facebook">Facebook test</a>
-            <a (click)="facebook()" class="login-form-connectwith facebook">
+            <a href="api/users/auth/facebook">Facebook test connect with passport (API)</a>
+            <a class="login-form-connectwith facebook">
                 <img src="../../../../assets/images/facebook.svg" class="connectwith-logo" />
                 S'identifier avec Facebook
             </a>
-            
-            <a (click)="twitter()" class="login-form-connectwith twitter">
+
+            <a class="login-form-connectwith twitter">
                 <img src="../../../../assets/images/twitter.svg" class="connectwith-logo" />
                 S'identifier avec Twitter
             </a>
-            
-            <a (click)="google()" class="login-form-connectwith google">
+
+            <a class="login-form-connectwith google">
                 <img src="../../../../assets/images/google.svg" class="connectwith-logo" />
                 S'identifier avec Google
             </a>

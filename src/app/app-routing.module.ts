@@ -9,9 +9,10 @@ import { CinemaMaapComponent } from './components/cinema/cinema-maap/cinema-maap
 import { TestComponent } from './components/test/test/test.component';
 import { Test2Component } from './components/test/test2/test2.component';
 import { AccountViewComponent } from './components/account/account-view/account-view.component'
+import { SocialComponent } from './components/login/social/social.component'
 
-import { 
-  AuthGuardService as AuthGuard 
+import {
+  AuthGuardService as AuthGuard
 } from './services/login/auth-guard.service';
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'account', component: AccountViewComponent, canActivate: [AuthGuard] },
     { path: 'cinema', component: CinemaMaapComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'login/social/:token', component: SocialComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'movie/:id', component: MovieDetailsComponent },
     { path: 'test', component: TestComponent },

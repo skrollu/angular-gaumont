@@ -25,6 +25,7 @@ import { ImportantAddComponent } from './components/layout/header/important-add/
 import { LoginPanelComponent } from './components/layout/header/login-panel/login-panel.component';
 import { MovieCardSliderComponent } from './components/movies/movie-card-slider/movie-card-slider.component';
 import { AccountViewComponent } from './components/account/account-view/account-view.component';
+import { SocialComponent } from './components/login/social/social.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AccountViewComponent } from './components/account/account-view/account-
     LoginPanelComponent,
     MovieCardSliderComponent,
     AccountViewComponent,
+    SocialComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,7 @@ import { AccountViewComponent } from './components/account/account-view/account-
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    GraphQLModule
+    GraphQLModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
