@@ -5,7 +5,8 @@
     "outDir": "./out-tsc/app",
     "types": [
       "leaflet",
-      "leaflet.markercluster"
+      "leaflet.markercluster",
+      "node"
     ]
   },
   "files": [

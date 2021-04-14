@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from 'src/app/services/login/login.service';
+import { AuthService } from 'src/app/services/login/auth.service';
+import { Router } from '@angular/router';
+import { SocialAuthService, SocialUser } from "angularx-social-login";
 
 @Component({
   selector: 'app-login-panel',
@@ -7,16 +9,42 @@ import { LoginService } from 'src/app/services/login/login.service';
   styleUrls: ['./login-panel.component.sass']
 })
 export class LoginPanelComponent implements OnInit {
+  loggedSocial: boolean = false;
   logged: boolean = false;
-  
-  constructor(private loginService: LoginService) { }
-  
+
+  socialUser: SocialUser;
+  user: any;
+
+  constructor(private authService: AuthService,
+     private router: Router,
+     private socialAuthService: SocialAuthService
+     ) { }
+
   ngOnInit(): void {
+    this.user = this.authService.getUser()
+    this.socialAuthService.authState.subscribe((user) => {
+      this.socialUser = user;
+      this.loggedSocial = (user != null);
+    });
   }
-  
+
   logout() {
-    this.loginService.logout().subscribe( data => {
+    console.log(this.authService.getUser())
+    this.authService.logout().subscribe(data => {
       console.log(data)
+      this.authService.removeUser();
+      this.router.navigate(['/']);
     })
+  }
+
+  signOut(): void {
+    this.socialAuthService.signOut().then(() => {
+      console.log("Disconnected from social")
+      this.authService.removeSocialUser();
+    });
+  }
+
+  isAuthenticated(): Boolean {
+    return this.authService.isAuthenticated()
   }
 }

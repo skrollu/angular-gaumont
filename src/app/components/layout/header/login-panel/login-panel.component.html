@@ -1,10 +1,20 @@
-<div class="login-panel" *ngIf="logged == false">
-    <div class="login-panel-sign">
-        <a routerLink="/login">Me connecter</a>
-        <!--  /
-                        <a routerLink="/" (click)="logout()">Logout</a> -->
-    </div>
-    <div class="login-panel-register" routerLink="/register">
-        <a>Créer un compte</a>
-    </div>
+<div class="login-panel">
+  <div class="login-panel-sign">
+    <a routerLink="/login" *ngIf="!isAuthenticated()">Me connecter</a>
+  </div>
+  <div class="login-panel-register" routerLink="/register"  *ngIf="!isAuthenticated()">
+    <a>Créer un compte</a>
+  </div>
+  <div class="account-info" *ngIf="socialUser != null">
+    <h4>{{ socialUser.name }}</h4>
+  </div>
+  <div class="account-info" *ngIf="user != null">
+    <h4>{{ user.name }}</h4>
+  </div>
+  <div class="login-panel-register" *ngIf="isAuthenticated()" (click)="logout()">
+    <a>Me déconnecter</a>
+  </div>
+  <div class="login-panel-register" *ngIf="loggedSocial" (click)="signOut()">
+    <a>Me déconnecter du réseau social</a>
+  </div>
 </div>

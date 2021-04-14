@@ -1,6 +1,6 @@
 .login-content {
     padding: 50px 0;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,19 +11,19 @@
     margin: 0 50px;
     border-radius: 5px;
     color: white;
-    
+
     font-size: 22px;
 }
 
 .login-form {
     position: relative;
     text-align: center;
-    
+
     padding-top: 80px;
     font-size: 45px;
-    
+
     width: 700px;
-    
+
     background-color: white;
     border-radius: 50px;
     overflow: hidden;
@@ -43,12 +43,12 @@
     cursor: pointer;
     font-size: 30px;
     font-weight: large;
-    
+
     text-align: center;
-    
+
     background: linear-gradient(rgb(255, 227, 67),rgb(255, 239, 12));
     color: black;
-    
+
     border: none;
     border-radius: 25px;
     padding: 12px 20px;
@@ -75,18 +75,20 @@
 
 .login-form-connectwith {
     display: grid;
+    padding: 0 20px;
+    min-width: 500px;
     grid-template-columns: 50px auto;
     align-items: center;
     justify-content: center;
 
     margin: 20px 100px;
     height: 80px;
-    
+
     font-size: 30px;
     font-weight: 50px;
     color: white;
     text-decoration: none;
-    
+
     border: none;
     border-radius: 15px;
 }
@@ -106,7 +108,7 @@
 }
 
 .facebook {
-    background-color: #121d8f;
+    background-color: #424fdf;
 }
 
 .twitter {
@@ -142,13 +144,13 @@
     width: 100px;
     top: 80px;
     right: 65px;
-    
+
     background: linear-gradient(#db0000, #eea404);
 }
 
 .login-form-buble:nth-child(3) {
     top: 300px;
-    right: 200px;    
+    right: 200px;
     background: linear-gradient(#e6dd64, #e78332);
 }
 

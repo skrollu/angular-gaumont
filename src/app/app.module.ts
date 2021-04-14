@@ -5,6 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module'
 import { GraphQLModule } from './graphql.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -24,6 +27,8 @@ import { SidebarComponent } from './components/layout/header/sidebar/sidebar.com
 import { ImportantAddComponent } from './components/layout/header/important-add/important-add.component';
 import { LoginPanelComponent } from './components/layout/header/login-panel/login-panel.component';
 import { MovieCardSliderComponent } from './components/movies/movie-card-slider/movie-card-slider.component';
+import { AccountViewComponent } from './components/account/account-view/account-view.component';
+import { SocialComponent } from './components/login/social/social.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +50,8 @@ import { MovieCardSliderComponent } from './components/movies/movie-card-slider/
     ImportantAddComponent,
     LoginPanelComponent,
     MovieCardSliderComponent,
+    AccountViewComponent,
+    SocialComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,9 +59,28 @@ import { MovieCardSliderComponent } from './components/movies/movie-card-slider/
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    GraphQLModule
+    GraphQLModule,
+    ReactiveFormsModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [{
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              "65885373760-s0jjb3i1mvj37filnfmtg016tbmke4fr.apps.googleusercontent.com"/*process.env.GOOGLE_CLIENT_ID*/
+            )
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider("2597571540540099" /* process.env.FACEBOOK_APP_ID */)
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

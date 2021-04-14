@@ -1,6 +1,6 @@
 # About the project
 
-It's website inspired by the Gaumont website. It's not a copy ! With it I learn about Angular technologies and also my API project: https://github.com/skrollu/express-mongo-api
+It's website inspired by the Gaumont website. It's not a copy ! With it I learn about Angular technologies and also improve my API project: https://github.com/skrollu/express-mongo-api
 
 # How to run this project ?
 
