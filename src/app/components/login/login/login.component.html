@@ -1,51 +1,73 @@
 <div class="login-content">
-    <div class="login-form">
-        <div class="login-form-buble"></div>
-        <div class="login-form-buble"></div>
-        <div class="login-form-buble"></div>
-        <div class="login-form-buble"></div>
-        <div class="login-form-buble"></div>
+  <div class="login-form">
+    <div class="login-form-buble"></div>
+    <div class="login-form-buble"></div>
+    <div class="login-form-buble"></div>
+    <div class="login-form-buble"></div>
+    <div class="login-form-buble"></div>
 
-        <div *ngIf="error != null">
-            <div class="login-form-error">
-                <p>
-                    {{error}}
-                </p>
-            </div>
-        </div>
-
-        <form (ngSubmit)="login()">
-            <div class="login-form-bloc">
-                <input type="email" name="email" [(ngModel)] = "email" placeholder="Email" required>
-            </div>
-            <div class="login-form-bloc">
-                <input type="password" name="password" [(ngModel)] = "password" placeholder="Mot de passe" required>
-            </div>
-            <div class="login-form-bloc">
-                <button id="login-form-button-id" type="submit">Se connecter</button>
-            </div>
-        </form>
-
-        <div class="login-form-redirect">
-            <a routerLink="/register">Vous n'avez pas en encore de compte ?</a>
-        </div>
-
-        <div class="login-form-connectwith-container">
-            <a href="api/users/auth/facebook">Facebook test connect with passport (API)</a>
-            <a class="login-form-connectwith facebook">
-                <img src="../../../../assets/images/facebook.svg" class="connectwith-logo" />
-                S'identifier avec Facebook
-            </a>
-
-            <a class="login-form-connectwith twitter">
-                <img src="../../../../assets/images/twitter.svg" class="connectwith-logo" />
-                S'identifier avec Twitter
-            </a>
-
-            <a class="login-form-connectwith google">
-                <img src="../../../../assets/images/google.svg" class="connectwith-logo" />
-                S'identifier avec Google
-            </a>
-        </div>
+    <div *ngIf="error != null">
+      <div class="login-form-error">
+        <p>
+          {{error}}
+        </p>
+      </div>
     </div>
+
+    <form (ngSubmit)="login()">
+      <div class="login-form-bloc">
+        <input type="email" name="email" [(ngModel)] = "email" placeholder="Email" required>
+      </div>
+      <div class="login-form-bloc">
+        <input type="password" name="password" [(ngModel)] = "password" placeholder="Mot de passe" required>
+      </div>
+      <div class="login-form-bloc">
+        <button id="login-form-button-id" type="submit">Se connecter</button>
+      </div>
+    </form>
+
+    <div class="login-form-redirect">
+      <a routerLink="/register">Vous n'avez pas en encore de compte ?</a>
+    </div>
+
+    <div class="login-form-connectwith-container">
+      <!-- <a href="api/users/auth/facebook">Facebook test connect with passport (API)</a> -->
+      <button (click)="signInWithFaceBook()" class="login-form-connectwith facebook">
+        <img src="../../../../assets/images/facebook.svg" class="connectwith-logo" />
+        S'identifier avec Facebook
+      </button>
+
+      <button (click)="signInWithGoogle()" class="login-form-connectwith twitter">
+        <img src="../../../../assets/images/twitter.svg" class="connectwith-logo" />
+        S'identifier avec Twitter
+      </button>
+
+      <button (click)="signInWithGoogle()" class="login-form-connectwith google">
+        <img src="../../../../assets/images/google.svg" class="connectwith-logo" />
+        S'identifier avec Google
+      </button>
+    </div>
+  </div>
+<!--   <div class="container" style="max-width: 550px">
+    <h2 class="text-center mb-5">Angular Login with Google</h2>
+
+    <div *ngIf="isLoggedin === true">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" [value]="socialUser.firstName" id="firstname" readonly>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" [value]="socialUser.lastName" id="lastname" readonly>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" [value]="socialUser.email" id="email" readonly>
+      </div>
+
+      <button type="button" (click)="signOut()" class="btn btn-primary">Log Out</button>
+    </div>
+  </div> -->
 </div>
+
+

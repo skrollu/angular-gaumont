@@ -29,26 +29,34 @@ export class AuthService {
   }
 
   public isAuthenticated() : Boolean {
-    let userData = localStorage.getItem('userInfo')
+    let userData = localStorage.getItem('user')
     if(userData && JSON.parse(userData)){
       return true;
     }
     return false;
   }
 
-  public setUserInfo(user){
-    localStorage.setItem('userInfo', JSON.stringify(user));
+  public setUser(user){
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
-  public getUserInfo(){
-    localStorage.getItem('userInfo');
+  public getUser(){
+    return localStorage.getItem('user');
   }
 
-  public removeUserInfo(){
-    localStorage.removeItem('userInfo');
+  public removeUser(){
+    localStorage.removeItem('user');
   }
 
-  public validate(email, password) {
-    return this.http.post('/api/authenticate', {'username' : email, 'password' : password}).toPromise()
+  public setSocialUser(socialUser){
+    localStorage.setItem('socialUser', JSON.stringify(socialUser));
+  }
+
+  public getSocialUser(){
+    return localStorage.getItem('socialUser');
+  }
+
+  public removeSocialUser(){
+    localStorage.removeItem('socialUser');
   }
 }

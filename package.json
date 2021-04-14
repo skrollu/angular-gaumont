@@ -22,6 +22,7 @@
     "@apollo/client": "^3.3.14",
     "@types/leaflet": "^1.7.0",
     "@types/leaflet.markercluster": "^1.4.4",
+    "@types/node": "^12.20.7",
     "angularx-social-login": "^3.5.5",
     "apollo-angular": "^2.4.0",
     "d3": "^6.6.2",
